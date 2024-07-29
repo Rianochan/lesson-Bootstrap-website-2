@@ -1,0 +1,336 @@
+:root{
+    /* ------ COLORS ------ */
+
+    /* --- Neutal colors --- */
+    --white: #fff;
+    
+    --gray100: #F8FAFF;
+    --gray200: #F3F6FF;
+    --gray250: #E4E9FC;
+    --gray300: #CCD6F9;
+    --gray500: #819CDF;
+    --gray700: #212D4A;
+
+    /* Brand colors */
+    --light-blue: #86AEFC;
+
+
+
+    /* ------ COLOR VARIANTS ------ */
+
+    /* Body */
+    --bg-website: var(--gray200);
+
+    /* Text */
+    --light-text: var(--white);
+    --dark-text: var(--gray700);
+
+    /* Buttons */
+
+    /* Primary */
+    --button-primary: var(--gray700);
+
+    --button-secondary: var(--white);
+    --hover-btn-secondary: var(--gray250);
+
+    /* Tab */
+    --bg-tab: var(--white);
+    --bg-tab-emoji: var(--gray100);
+
+    /* Accordion */
+    --bg-accordion-button: var(--white);
+    --bg-accordion-body: var(--white);
+
+
+    /* ------ TYPOGRAPHY ------ */
+
+    /* Font size */
+    --fz-h1: 40px;
+    --fz-h2: 32px;
+    --fz-title: 20px;
+
+    --fz-default-text: 16px;
+
+    --fz-button-text: 16px;
+
+    /* Font weight */
+    --semibold: 500;
+    --regular: 400;
+
+
+    /* ------ MARGIN ------ */
+    --small-margin: 50px;
+    --default-margin: 180px;
+
+    /* ------ BORDER ------ */
+    
+    /* Border-radius */
+
+    --rounded: 20px;
+    --circle: 50%;
+}
+
+/* Main components */
+
+body{
+    font-family: "Montserrat";
+    font-size: var(--fz-default-text);
+    color: var(--dark-text);
+
+    background-color: var(--bg-website);
+}
+
+section{
+    margin-top: var(--default-margin);
+}
+
+.slider-section{
+    margin-top: var(--small-margin);
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+a{
+    font-weight: var(--semibold);
+    color: var(--dark-text);
+    text-decoration: none;
+}
+
+/* ------ BUTTONS ------ */
+
+/* Primary */
+.primary-button{
+    font-weight: var(--semibold);
+
+    color: var(--light-text);
+    background-color: var(--button-primary);
+    border: none;
+}
+
+/* Secondary */
+.secondary-button{
+    font-weight: var(--semibold);
+
+    border: none;
+    color: var(--dark-text);
+    background-color: var(--button-secondary);
+}
+
+.secondary-button:hover{
+    color: var(--dark-text);
+    background-color: var(--hover-btn-secondary);
+}
+
+
+/* ------ HEADER SECTION ------ */
+
+/* Header logo */
+.logo{
+    width: 152px;
+    height: 31px;
+    display: block;
+
+    background-image: url("../img/Logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* Menu navigation */
+
+.header__menu{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header__menu-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+
+/* ------ SLIDER SECTION ------ */
+
+.carousel-indicators{
+    position: absolute;
+    bottom: -50px;
+}
+
+.carousel-indicators [data-bs-target]{
+    height: 10px;
+    width: 10px;
+    border-radius: var(--circle);
+
+    background-color: var(--gray300);
+    opacity: 1;
+}
+
+.carousel-indicators .active{
+    background-color: var(--gray500);
+    opacity: 1;
+}
+
+.carousel-inner{
+    border-radius: var(--rounded);
+}
+
+
+/* ------ MODAL AND TABS SECTION ------ */
+
+/* Modal section */
+
+.modal-trigger{
+    gap: 24px;
+}
+
+.modal-trigger__bg-image{
+    width: 88px;
+    height: 82px;
+}
+
+.modal-header-change{
+    border-bottom: none;
+}
+
+.modal-title-change{
+    margin-bottom: 10px;
+}
+
+.modal-body__tex-wrapper{
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.modal-phone{
+    font-weight: var(--semibold);
+}
+
+.modal-footer-change{
+    justify-content: center;
+
+    border-top: none;
+}
+
+.modal-footer__button{
+    min-width: 100px;
+}
+
+
+/* Tab section */
+
+.nav-tabs .nav-link{
+    color: var(--dark-text);
+    font-weight: var(--regular);
+}
+
+.nav-tabs .nav-link.active{
+    color: var(--dark-text);
+    font-weight: var(--semibold);
+    border: none;
+
+    background-color: var(--bg-tab);
+}
+
+.nav-tabs{
+    border-bottom: none;
+}
+
+.tabs-wrapper{
+    height: 100%;
+}
+
+.tab-content-change{
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+    padding: 20px;
+
+    border-bottom-left-radius: var(--bs-border-radius-xl);
+    border-bottom-right-radius: var(--bs-border-radius-xl);
+    border-top-right-radius: var(--bs-border-radius-xl);
+    background-color: var(--bg-tab);
+}
+
+.tab-content-wrapper{
+    display: flex;
+    gap: 24px;
+
+    align-items: center;
+}
+
+.tab__emoji{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 84px;
+    width: 84px;
+
+    border-radius: 50%;
+    background-color: var(--bg-tab-emoji);
+}
+
+
+/* ------ ACCORDION SECTION ------ */
+
+.accordion-title{
+    text-align: center;
+
+    margin-bottom: var(--small-margin);
+}
+
+.accordion-item{
+    border: none;
+}
+
+.accordion-button{
+    font-weight: var(--semibold);
+    color: var(--dark-text);
+
+    background-color: var(--bg-accordion-button);
+}
+
+.accordion-button:not(.collapsed) {
+    font-weight: var(--semibold);
+    color: var(--dark-text);
+
+    background-color: var(--bg-accordion-button);
+}
+
+.accordion-body{
+    background-color: var(--bg-accordion-body);
+}
+
+
+/* ------ FOOTER ------ */
+
+.footer{
+    margin-top: var(--small-margin);
+    padding: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo{
+    width: 152px;
+    height: 31px;
+    display: block;
+
+    background-image: url("../img/footer-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
