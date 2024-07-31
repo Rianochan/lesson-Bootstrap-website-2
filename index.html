@@ -18,6 +18,13 @@
     <!-- main.css -->
     <link rel="stylesheet" href="CSS/main.css">
 
+    <!-- FONT -->
+
+    <!-- Montserrat - Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
@@ -42,7 +49,11 @@
 
                 <!-- Header button -->
                 <div class="col-xl-3">
-                    <button type="button" class="btn btn-secondary header-button secondary-button w-100">Зарегистрироваться</button>
+
+                    <button type="button" class="btn btn-secondary secondary-button w-100" data-bs-toggle="modal" data-bs-target="#Modal">
+                        Зарегистрироваться
+                    </button>
+                    
                 </div>
 
             </div>
@@ -128,18 +139,18 @@
                     <!-- MODAL -->
                 
                     <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
             
                                 <!-- Modal header -->
                                 <div class="modal-header modal-header-change">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <h1 class="modal-title fs-5" id="Modal">Всего 1 шаг</h1>
+                                    <button type="button" class="btn-close btn-close-header" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
             
                                 <!-- Modal body -->
                                 <div class="modal-body">
-                                    <div class="modal-body__tex-wrapper">
-                                        <h1 class="modal-title fs-5 modal-title-change" id="Modal">Всего 1 шаг</h1>
+                                    <div class="modal-body__text-wrapper">
                                         <p class="modal-text">Чтобы зарегистриоваться в нашем приложении, свяжитесь с менеджером:</p>
                                         <p class="modal-phone">+7 (900) 278-76-74</p>
                                     </div>

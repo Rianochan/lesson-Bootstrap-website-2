@@ -5,8 +5,8 @@
     --white: #fff;
     
     --gray100: #F8FAFF;
-    --gray200: #F3F6FF;
-    --gray250: #E4E9FC;
+    --gray200: #E8EEFF;
+    --gray250: #D0DAFA;
     --gray300: #CCD6F9;
     --gray500: #819CDF;
     --gray700: #212D4A;
@@ -198,14 +198,28 @@ a{
 }
 
 .modal-header-change{
+    justify-content: center;
+    padding-top: 40px;
+
     border-bottom: none;
 }
 
-.modal-title-change{
-    margin-bottom: 10px;
+.btn-close-header{
+    position: absolute;
+    top: 24px;
+    right: 24px;
 }
 
-.modal-body__tex-wrapper{
+.modal-header .btn-close{
+    margin: 0;
+}
+
+.modal-body{
+    padding-left: 81px;
+    padding-right: 81px;
+}
+
+.modal-body__text-wrapper{
     display: flex;
     flex-direction: column;
 
@@ -218,6 +232,7 @@ a{
 
 .modal-footer-change{
     justify-content: center;
+    padding-bottom: 40px;
 
     border-top: none;
 }
@@ -243,7 +258,8 @@ a{
 }
 
 .nav-tabs{
-    border-bottom: none;
+    --bs-nav-tabs-border-width: 0;
+    --bs-nav-tabs-border-radius: var(--rounded);
 }
 
 .tabs-wrapper{
@@ -284,6 +300,16 @@ a{
 
 /* ------ ACCORDION SECTION ------ */
 
+.accordion{
+    --bs-accordion-border-radius: var(--rounded);
+    --bs-accordion-inner-border-radius: var(--rounded);
+}
+
+.accordion-body{
+    border-bottom-left-radius: var(--rounded);
+    border-bottom-right-radius: var(--rounded);
+}
+
 .accordion-title{
     text-align: center;
 
@@ -301,11 +327,16 @@ a{
     background-color: var(--bg-accordion-button);
 }
 
+.accordion-button:focus{
+    box-shadow: none;
+}
+
 .accordion-button:not(.collapsed) {
     font-weight: var(--semibold);
     color: var(--dark-text);
 
     background-color: var(--bg-accordion-button);
+    box-shadow: none;
 }
 
 .accordion-body{
